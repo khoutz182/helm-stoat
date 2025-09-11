@@ -1,4 +1,4 @@
-Installation complete!
+Installation complete!  It may take a few minutes to spin up.
 
-Access the dashboard at https://{{ .Values.global.domain }}/
+Access at https://{{ .Values.global.domain }}/
 

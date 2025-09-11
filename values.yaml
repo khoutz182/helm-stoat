@@ -67,16 +67,16 @@ mongodb:
 
 
 redis:
-  architecture: standalone
 #  image:
 #    repository: eqalpha/keydb
 #    tag: x86_64_v6.3.4
 #    pullPolicy: IfNotPresent
+  architecture: standalone
   auth:
     enabled: false
-master:
-  persistence:
-    enabled: false
+  master:
+    persistence:
+      enabled: false
 
 
 rabbitmq:
