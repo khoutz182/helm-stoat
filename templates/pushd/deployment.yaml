@@ -53,8 +53,8 @@ spec:
             {{- end }}
       volumes:
         - name: config
-          configMap:
-            name: {{ include "stoat.fullname" . }}-config
+          secret:
+            secretName: {{ include "stoat.fullname" . }}-config
         {{- with .Values.pushd.extra_volumes }}
         {{ toYaml . | nindent 8 }}
         {{- end }}
