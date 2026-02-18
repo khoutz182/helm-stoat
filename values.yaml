@@ -298,8 +298,8 @@ minio:
 # Web app
 web:
   image:
-    repository: ghcr.io/revoltchat/client
-    tag: master
+    repository: ghcr.io/stoatchat/for-web
+    tag: v0.2.1
     pullPolicy: Always
   annotations: {}
   labels: {}
@@ -319,8 +319,8 @@ web:
 # Stoat API Server
 api:
   image:
-    repository: ghcr.io/revoltchat/server
-    tag: 20250930-2
+    repository: ghcr.io/stoatchat/api
+    tag: v0.11.5
     pullPolicy: IfNotPresent
   replicaCount: 1
   annotations: {}
@@ -341,8 +341,8 @@ api:
 # Events service
 bonfire:
   image:
-    repository: ghcr.io/revoltchat/bonfire
-    tag: 20250930-2
+    repository: ghcr.io/stoatchat/events
+    tag: v0.11.5
     pullPolicy: IfNotPresent
   replicaCount: 1
   annotations: {}
@@ -363,8 +363,8 @@ bonfire:
 # File server
 autumn:
   image:
-    repository: ghcr.io/revoltchat/autumn
-    tag: 20250930-2
+    repository: ghcr.io/stoatchat/file-server
+    tag: v0.11.5
     pullPolicy: IfNotPresent
   replicaCount: 1
   annotations: {}
@@ -386,8 +386,8 @@ autumn:
 # Metadata and image proxy
 january:
   image:
-    repository: ghcr.io/revoltchat/january
-    tag: 20250930-2
+    repository: ghcr.io/stoatchat/proxy
+    tag: v0.11.5
     pullPolicy: IfNotPresent
   replicaCount: 1
   annotations: {}
@@ -408,8 +408,8 @@ january:
 # Regular task daemon
 crond:
   image:
-    repository: ghcr.io/revoltchat/crond
-    tag: 20250930-2
+    repository: ghcr.io/stoatchat/crond
+    tag: v0.11.5
     pullPolicy: IfNotPresent
   replicaCount: 1
   annotations: {}
@@ -427,8 +427,8 @@ crond:
 # Push notification daemon
 pushd:
   image:
-    repository: ghcr.io/revoltchat/pushd
-    tag: 20250930-2
+    repository: ghcr.io/stoatchat/pushd
+    tag: v0.11.5
     pullPolicy: IfNotPresent
   replicaCount: 1
   annotations: {}
@@ -446,8 +446,52 @@ pushd:
 # Tenor proxy
 gifbox:
   image:
-    repository: ghcr.io/revoltchat/gifbox
-    tag: 20250930-2
+    repository: ghcr.io/stoatchat/gifbox
+    tag: v0.11.5
+    pullPolicy: IfNotPresent
+  replicaCount: 1
+  annotations: {}
+  labels: {}
+  nodeSelector: {}
+  tolerations: []
+  affinity: {}
+  resources: {}
+  livenessProbe:
+  readinessProbe:
+  extra_volumes: []
+  extra_volumeMounts: []
+  configMountPath: /Revolt.toml
+  service:
+    type: ClusterIP
+    annotations: {}
+
+# LiveKit proxy
+livekit:
+  image:
+    repository: ghcr.io/stoatchat/livekit-server
+    tag: v1.9.9
+    pullPolicy: IfNotPresent
+  replicaCount: 1
+  annotations: {}
+  labels: {}
+  nodeSelector: {}
+  tolerations: []
+  affinity: {}
+  resources: {}
+  livenessProbe:
+  readinessProbe:
+  extra_volumes: []
+  extra_volumeMounts: []
+  configMountPath: /Revolt.toml
+  service:
+    type: ClusterIP
+    annotations: {}
+
+# LiveKit proxy
+voice:
+  image:
+    repository: ghcr.io/stoatchat/voice-ingress
+    tag: v0.11.5
     pullPolicy: IfNotPresent
   replicaCount: 1
   annotations: {}
