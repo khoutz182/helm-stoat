@@ -16,7 +16,7 @@ entries:
       tanzuCategory: service
     apiVersion: v2
     appVersion: 2025.7.23
-    created: "2026-02-21T03:44:15.834841351-06:00"
+    created: "2026-02-21T12:36:28.739693563-06:00"
     dependencies:
     - name: common
       repository: oci://registry-1.docker.io/bitnamicharts
@@ -62,7 +62,7 @@ entries:
       tanzuCategory: service
     apiVersion: v2
     appVersion: 8.0.13
-    created: "2026-02-21T03:44:15.838633525-06:00"
+    created: "2026-02-21T12:36:28.743416322-06:00"
     dependencies:
     - name: common
       repository: oci://registry-1.docker.io/bitnamicharts
@@ -103,7 +103,7 @@ entries:
       tanzuCategory: service
     apiVersion: v2
     appVersion: 4.1.3
-    created: "2026-02-21T03:44:15.841096612-06:00"
+    created: "2026-02-21T12:36:28.745790118-06:00"
     dependencies:
     - name: common
       repository: oci://registry-1.docker.io/bitnamicharts
@@ -147,7 +147,7 @@ entries:
       tanzuCategory: service
     apiVersion: v2
     appVersion: 8.2.1
-    created: "2026-02-21T03:44:15.844908847-06:00"
+    created: "2026-02-21T12:36:28.749863251-06:00"
     dependencies:
     - name: common
       repository: oci://registry-1.docker.io/bitnamicharts
@@ -173,59 +173,4 @@ entries:
     urls:
     - https://khoutz182.github.io/helm-stoat/charts/redis-22.0.7.tgz
     version: 22.0.7
-  stoat:
-  - apiVersion: v2
-    appVersion: 0.0.2
-    created: "2026-02-21T03:44:15.882690096-06:00"
-    dependencies:
-    - condition: global.subcharts.mongo.enabled
-      name: mongodb
-      repository: https://charts.bitnami.com/bitnami
-      version: '>=0.0.0'
-    - condition: global.subcharts.redis.enabled
-      name: redis
-      repository: https://charts.bitnami.com/bitnami
-      version: '>=0.0.0'
-    - condition: global.subcharts.minio.enabled
-      name: minio
-      repository: https://charts.bitnami.com/bitnami
-      version: '>=0.0.0'
-    - condition: global.subcharts.rabbitmq.enabled
-      name: rabbitmq
-      repository: https://charts.bitnami.com/bitnami
-      version: '>=0.0.0'
-    description: Stoat Chat self hosted server
-    digest: 2b27ec3eaf4ef8f0c4c6c241337637fdc398a2659c98aab93f80adecaa3554b8
-    name: stoat
-    type: application
-    urls:
-    - https://khoutz182.github.io/helm-stoat/charts/stoat-0.0.3.tgz
-    version: 0.0.3
-  - apiVersion: v2
-    appVersion: 0.0.2
-    created: "2026-02-21T03:44:15.857303032-06:00"
-    dependencies:
-    - condition: global.subcharts.mongo.enabled
-      name: mongodb
-      repository: https://charts.bitnami.com/bitnami
-      version: '>=0.0.0'
-    - condition: global.subcharts.redis.enabled
-      name: redis
-      repository: https://charts.bitnami.com/bitnami
-      version: '>=0.0.0'
-    - condition: global.subcharts.minio.enabled
-      name: minio
-      repository: https://charts.bitnami.com/bitnami
-      version: '>=0.0.0'
-    - condition: global.subcharts.rabbitmq.enabled
-      name: rabbitmq
-      repository: https://charts.bitnami.com/bitnami
-      version: '>=0.0.0'
-    description: Stoat Chat self hosted server
-    digest: 0540a1e17dea3e22e122618509838c4cee447dcc6fce8e8f7d3a4c6d99d991e1
-    name: stoat
-    type: application
-    urls:
-    - https://khoutz182.github.io/helm-stoat/charts/stoat-0.0.2.tgz
-    version: 0.0.2
-generated: "2026-02-21T03:44:15.831836579-06:00"
+generated: "2026-02-21T12:36:28.736139785-06:00"
